@@ -3,7 +3,7 @@
 ## This is just an experiment rebuilding Firewatch landing page site, parallax effect.
 
 * The original site: [Firewatch](http://www.firewatchgame.com/)
-* What I made: [Firewatch]()
+* What I made: [Firewatch](https://fadilnatakusumah.github.io/firewatch-page/)
 ### Screnshots:
 
 
