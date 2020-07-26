@@ -1,8 +1,324 @@
 *,
 html,
 body {
-    margin    : 0;
-    padding   : 0;
-    box-sizing: border-box;
+  margin    : 0;
+  padding   : 0;
+  box-sizing: border-box;
 }
 
+@font-face {
+  src        : url('/assets/fonts/Verlag-Black.otf');
+  font-family: VerlagBlack;
+}
+
+header {
+  z-index         : 1;
+  position        : absolute;
+  top             : 0;
+  left            : 0;
+  height          : 30px;
+  width           : 100%;
+  background-color: #210002;
+  color           : #D69700;
+  font-family     : 'VerlagBlack', Arial, Helvetica, sans-serif;
+}
+
+nav {
+  height: 100%;
+}
+
+nav h4 {
+  display       : flex;
+  align-items   : center;
+  float         : right;
+  font-weight   : normal;
+  text-transform: uppercase;
+  height        : 100%;
+  padding       : 0 10px;
+  transition    : .5s;
+  cursor        : pointer;
+}
+
+nav h4:first-child {
+  float: left;
+}
+
+nav h4:hover {
+  background-color: #6e2e00;
+}
+
+nav h4:nth-child(5) {
+  color           : #ffaf00;
+  background-color: #A34300;
+}
+
+section {
+  height: 100vh;
+  width : 100%;
+}
+
+.container {
+  overflow: hidden;
+  width   : 100%;
+  height  : 100vh;
+}
+
+/* .images-mobile {
+  background-image   : url('/assets/bg/bg-mobile.png');
+  background-position: center;
+  background-repeat  : no-repeat;
+  background-size    : auto 100%;
+  height             : 100%;
+} */
+
+.images-parallax {
+  width           : 100%;
+  height          : 100%;
+  background-color: #210002;
+  position        : relative;
+}
+
+#parallax-helper {
+  height          : 100px;
+  background-color: #210002;
+  width           : 100%;
+  margin-top      : -10px;
+}
+
+.image-wrapper {
+  position      : absolute;
+  width         : 100%;
+  height        : 100%;
+  padding-bottom: 100px;
+  top           : 0;
+}
+
+.image-wrapper img {
+  object-fit: cover;
+  width     : 100%;
+  height    : 100%;
+}
+
+.content {
+  width              : 100%;
+  z-index            : 0;
+  padding            : 100px 0;
+  /* top             : 150%; */
+  position           : absolute;
+  color              : #D69700;
+  background-color   : #210002;
+}
+
+.headline-one {
+  text-align: center;
+}
+
+.headline-one h2 {
+  text-transform: uppercase;
+  font-size     : 2em;
+  font-weight   : normal;
+  letter-spacing: 7px;
+  color         : #ffaf00;
+}
+
+.platform-game {
+  display              : grid;
+  grid-template-columns: 300px auto;
+  justify-content      : center;
+  column-gap           : 20px;
+  padding              : 30px 0;
+}
+
+.button-link {
+  background-color: #ffaf00;
+  color           : #210002;
+  padding         : 10px;
+  width           : 300px;
+  text-transform  : uppercase;
+  font-weight     : bold;
+  margin          : 15px 0;
+  text-align      : center;
+  transition      : .5s;
+}
+
+.button-link:hover {
+  background-color: white;
+  cursor          : pointer;
+}
+
+.video-player {
+  display        : flex;
+  justify-content: center;
+  padding        : 40px;
+  height         : 700px;
+}
+
+.video-player iframe {
+  max-width: 800px;
+  width    : 100%;
+  height   : 100%;
+}
+
+.blur {
+  height          : 100px;
+  width           : 100%;
+  background-color: #210002;
+  filter          : blur(200px);
+  position        : absolute;
+  top             : 100vh;
+  z-index         : 100;
+}
+
+.headline-two {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+}
+
+.headline-two .title {
+  color        : #ffaf00;
+  font-size    : 2em;
+  font-weight  : bold;
+  max-width    : 700px;
+  text-align   : justify;
+  margin-bottom: 30px;
+}
+
+.description {
+  column-count : 2;
+  margin-bottom: 40px;
+}
+
+.description p {
+  max-width    : 330px;
+  margin       : 0 10px;
+  margin-bottom: 30px;
+  font-size    : 1.2em;
+  text-align   : justify;
+}
+
+.alt {
+  color           : #210002;
+  background-color: #973700;
+}
+
+.alt:hover {
+  color           : #210002;
+  background-color: #ffaf00;
+}
+
+
+.internal-links {
+  display              : grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom        : 60px;
+  column-gap           : 40px;
+}
+
+.internal-links ul {
+  display        : flex;
+  flex-direction : column;
+  justify-content: flex-end;
+  list-style     : none;
+}
+
+#internal-link-1 {
+  height          : 99px;
+  background-size : contain;
+  background-color: #973700;
+  width           : 283px;
+  background-image: url('http://www.firewatchgame.com/images/merchlink_transparent.png');
+}
+
+.thumbnail {
+  display              : grid;
+  column-gap           : 40px;
+  row-gap              : 30px;
+  grid-template-columns: 400px 400px;
+  justify-content: center;
+  margin-bottom        : 30px;
+}
+
+.thumbnail img {
+  max-width: 400px;
+  width: 100%;
+}
+
+/* 
+.image-container {
+  position: relative;
+  height  : 100%;
+  width   : 100%;
+}
+
+
+.content {
+  padding         : 50px 0;
+  color           : #D69700;
+  height          : 100%;
+  width           : 100%;
+  background-color: #210002;
+  text-align      : center;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+}
+
+.headline-one {
+  padding: 20px 0;
+}
+
+.headline-one h2 {
+  font-size: 2.5em;
+  margin   : 0;
+  padding  : 0;
+}
+
+
+.video-player {
+  padding: 30px 0;
+}
+
+.game-synopsis {
+  background-color: #210002;
+  color           : #D69700;
+  text-align      : left;
+  padding         : 0 10px;
+}
+
+.offering {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  padding       : 35px 0;
+}
+
+.thumbnail {
+  display              : grid;
+  column-gap           : 10px;
+  row-gap              : 30px;
+  grid-template-columns: auto;
+  margin-bottom        : 30px;
+}
+
+.thumbnail img {
+  width: 100%;
+}
+
+.headline-two {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  text-align    : center;
+  font-weight   : normal;
+}
+
+.headline-two h1,
+.headline-two h2 {
+  margin: 15px 0;
+}
+
+.headline-two h1 {
+  font-weight: normal;
+  font-size  : 2em;
+} */
