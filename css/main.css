@@ -63,13 +63,14 @@ section {
   height  : 100vh;
 }
 
-/* .images-mobile {
+.images-mobile {
   background-image   : url('/assets/bg/bg-mobile.png');
   background-position: center;
   background-repeat  : no-repeat;
   background-size    : auto 100%;
   height             : 100%;
-} */
+  display            : none;
+}
 
 .images-parallax {
   width           : 100%;
@@ -223,11 +224,24 @@ section {
 }
 
 #internal-link-1 {
+  cursor          : pointer;
+  transition      : .5s;
   height          : 99px;
   background-size : contain;
   background-color: #973700;
   width           : 283px;
   background-image: url('http://www.firewatchgame.com/images/merchlink_transparent.png');
+}
+
+#internal-link-1:hover,
+#internal-link-1:hover~div {
+  background-color: #ffaf00;
+}
+
+.internal-links ul:first-child li div.alt:hover,
+.internal-links ul:first-child li:hover>div {
+  background-color: #ffaf00 !important;
+
 }
 
 .thumbnail {
@@ -296,6 +310,8 @@ footer p {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size     : 1em;
+  padding       : 0 10px;
+  text-align    : center;
 }
 
 footer div {
@@ -323,3 +339,66 @@ footer div {
   background-image : url('http://www.firewatchgame.com/images/logo_panic_transparent.png');
 }
 
+@media screen and (max-width: 1354px) {
+  .headline-three .support-links {
+    background-image: none;
+
+    flex-direction: column;
+    align-items   : center;
+  }
+}
+
+
+@media screen and (max-width: 875px) {
+  .thumbnail {
+    grid-template-columns: auto;
+    justify-content      : center;
+    padding              : 0 30px;
+  }
+
+  .thumbnail img {
+    width    : 100%;
+    max-width: 700px;
+  }
+
+  .internal-links {
+    grid-template-columns: auto;
+  }
+
+  .description {
+    column-count: 1;
+    padding     : 0 40px;
+  }
+
+  .description p {
+    max-width: 800px;
+  }
+
+  .title {
+    padding: 0 40px;
+  }
+
+  .video-player {
+    height: 300px;
+  }
+
+  .platform-game {
+    grid-template-columns: 300px;
+  }
+
+  .images-mobile {
+    display: block;
+  }
+
+  .images-parallax {
+    display: none;
+  }
+
+  header {
+    display: none;
+  }
+
+  .headline-one {
+    padding: 0 15px;
+  }
+}
