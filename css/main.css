@@ -79,7 +79,7 @@ section {
 }
 
 #parallax-helper {
-  height          : 100px;
+  height          : 120px;
   background-color: #210002;
   width           : 100%;
   margin-top      : -10px;
@@ -102,10 +102,10 @@ section {
 .content {
   width              : 100%;
   z-index            : 0;
-  padding            : 100px 0;
+  padding-top        : 100px;
   /* top             : 150%; */
   position           : absolute;
-  color              : #D69700;
+  color              : #ffaf00;
   background-color   : #210002;
 }
 
@@ -235,90 +235,91 @@ section {
   column-gap           : 40px;
   row-gap              : 30px;
   grid-template-columns: 400px 400px;
-  justify-content: center;
-  margin-bottom        : 30px;
+  justify-content      : center;
+  margin-bottom        : 70px;
 }
 
 .thumbnail img {
   max-width: 400px;
-  width: 100%;
+  width    : 100%;
 }
 
-/* 
-.image-container {
-  position: relative;
-  height  : 100%;
-  width   : 100%;
-}
-
-
-.content {
-  padding         : 50px 0;
-  color           : #D69700;
-  height          : 100%;
-  width           : 100%;
-  background-color: #210002;
-  text-align      : center;
-  display         : flex;
-  flex-direction  : column;
-  align-items     : center;
-}
-
-.headline-one {
-  padding: 20px 0;
-}
-
-.headline-one h2 {
-  font-size: 2.5em;
-  margin   : 0;
-  padding  : 0;
-}
-
-
-.video-player {
-  padding: 30px 0;
-}
-
-.game-synopsis {
-  background-color: #210002;
-  color           : #D69700;
-  text-align      : left;
-  padding         : 0 10px;
-}
-
-.offering {
+.headline-three {
   display       : flex;
   flex-direction: column;
   align-items   : center;
-  padding       : 35px 0;
 }
 
-.thumbnail {
-  display              : grid;
-  column-gap           : 10px;
-  row-gap              : 30px;
-  grid-template-columns: auto;
-  margin-bottom        : 30px;
-}
-
-.thumbnail img {
-  width: 100%;
-}
-
-.headline-two {
-  display       : flex;
-  flex-direction: column;
-  align-items   : center;
+.headline-three h1 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-weight   : 500;
+  font-size     : 2.3em;
+  max-width     : 600px;
   text-align    : center;
-  font-weight   : normal;
+  margin-bottom : 20px;
 }
 
-.headline-two h1,
-.headline-two h2 {
-  margin: 15px 0;
+.headline-three h3 {
+  font-size     : 1.2em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color         : #973700;
+  margin-bottom : 20px;
 }
 
-.headline-two h1 {
-  font-weight: normal;
-  font-size  : 2em;
-} */
+
+.headline-three .support-links {
+  background-image   : url('http://www.firewatchgame.com/images/firewatch_shield_small.png');
+  display            : flex;
+  justify-content    : space-between;
+  align-items        : center;
+  background-size    : contain;
+  background-repeat  : no-repeat;
+  background-position: center;
+  width              : 51%;
+  margin-bottom      : 30px;
+}
+
+footer {
+  z-index       : 10;
+  width         : 100%;
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+  padding       : 30px 0;
+}
+
+footer p {
+  margin-bottom : 5px;
+  color         : #973700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size     : 1em;
+}
+
+footer div {
+  display        : flex;
+  justify-content: space-evenly;
+  max-width      : 800px;
+  width          : 100%;
+  margin         : 50px 0;
+}
+
+#footer-image-1 {
+  background-size  : cover;
+  background-repeat: no-repeat;
+  background-color : #973700;
+  height           : 69px;
+  width            : 125px;
+  background-image : url('http://www.firewatchgame.com/images/logo_camposanto_transparent.png');
+}
+
+#footer-image-2 {
+  background-repeat: no-repeat;
+  background-size  : cover;
+  background-color : #973700;
+  padding          : 40px;
+  background-image : url('http://www.firewatchgame.com/images/logo_panic_transparent.png');
+}
+
