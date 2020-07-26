@@ -1,0 +1,11 @@
+{
+  "name": "firewatch-web",
+  "version": "1.0.0",
+  "description": "Firewatch Landing Page",
+  "main": "index.js",
+  "repository": "git@github.com:fadilnatakusumah/firewatch-page.git",
+  "homepage": "https://fadilnatakusumah.github.io/firewatch-page/",
+  "author": "fadilnatakusumah <fadil.ntksmh@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
