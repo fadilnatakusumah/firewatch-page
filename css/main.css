@@ -64,7 +64,7 @@ section {
 }
 
 .images-mobile {
-  background-image   : url('/assets/bg/bg-mobile.png');
+  background-image   : url('assets/bg/bg-mobile.png');
   background-position: center;
   background-repeat  : no-repeat;
   background-size    : auto 100%;
