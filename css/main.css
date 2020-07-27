@@ -6,10 +6,10 @@ body {
   box-sizing: border-box;
 }
 
-@font-face {
-  src        : url('/assets/fonts/Verlag-Black.otf');
+/* @font-face {
+  src        : url('./assets/fonts/Verlag-Black.otf');
   font-family: VerlagBlack;
-}
+} */
 
 header {
   z-index         : 1;
@@ -20,7 +20,7 @@ header {
   width           : 100%;
   background-color: #210002;
   color           : #D69700;
-  font-family     : 'VerlagBlack', Arial, Helvetica, sans-serif;
+  font-family     : 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
 
 nav {
@@ -34,7 +34,7 @@ nav h4 {
   font-weight   : normal;
   text-transform: uppercase;
   height        : 100%;
-  padding       : 0 10px;
+  padding       : 5px 10px 0 10px;
   transition    : .5s;
   cursor        : pointer;
 }
@@ -286,7 +286,7 @@ section {
 .headline-three .support-links {
   background-image   : url('http://www.firewatchgame.com/images/firewatch_shield_small.png');
   display            : flex;
-  justify-content    : space-between;
+  justify-content    : space-evenly;
   align-items        : center;
   background-size    : contain;
   background-repeat  : no-repeat;
@@ -337,6 +337,13 @@ footer div {
   background-color : #973700;
   padding          : 40px;
   background-image : url('http://www.firewatchgame.com/images/logo_panic_transparent.png');
+}
+
+
+.hoverYellow:hover {
+  transition      : .5s;
+  background-color: #ffaf00 !important;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1354px) {
