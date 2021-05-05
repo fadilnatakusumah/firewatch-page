@@ -1,307 +1,373 @@
+:root {
+  --main-color        : #ffaf00;
+  --bg-color          : #6e2e00;
+  --bg-color-secondary: #A34300;
+  --bg-color-tertiary : #210002;
+}
+
 *,
 html,
 body {
   margin    : 0;
   padding   : 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
-/* @font-face {
-  src        : url('./assets/fonts/Verlag-Black.otf');
+@font-face {
+  src        : url('/assets/fonts/Verlag-Black.otf');
   font-family: VerlagBlack;
-} */
+}
+
+@font-face {
+  font-family: FuturaPT;
+  src        : url('/assets/fonts/FuturaPTDemi.otf');
+}
 
 header {
   z-index         : 1;
   position        : absolute;
   top             : 0;
   left            : 0;
-  height          : 30px;
   width           : 100%;
-  background-color: #210002;
-  color           : #D69700;
-  font-family     : 'Josefin Sans', Arial, Helvetica, sans-serif;
+  height          : 34px;
+  background-color: var(--bg-color-tertiary);
+  color           : var(--main-color);
+  font-family     : 'FuturaPT', 'VerlagBlack', 'Josefin Sans', Arial, Helvetica, sans-serif;
 }
 
 nav {
-  height: 100%;
+  position       : relative;
+  height         : 100%;
+  display        : flex;
+  justify-content: flex-end;
 }
 
-nav h4 {
+nav a {
   display       : flex;
   align-items   : center;
   float         : right;
-  font-weight   : normal;
+  font-weight   : bolder;
   text-transform: uppercase;
   height        : 100%;
-  padding       : 5px 10px 0 10px;
   transition    : .5s;
   cursor        : pointer;
+  padding       : 0 12px;
+  font-size     : 14px;
+  letter-spacing: 0.5px;
 }
 
-nav h4:first-child {
-  float: left;
+nav a:first-child {
+  font-size: 18px;
+  position : absolute;
+  left     : 0;
 }
 
-nav h4:hover {
-  background-color: #6e2e00;
+nav a:hover {
+  background-color: var(--bg-color);
 }
 
-nav h4:nth-child(5) {
-  color           : #ffaf00;
-  background-color: #A34300;
+nav a.active {
+  background-color: var(--bg-color-secondary);
+}
+
+nav a:nth-child(5) {
+  color           : var(--main-color);
+  background-color: var(--bg-color);
 }
 
 section {
-  height: 100vh;
-  width : 100%;
+  min-height: 100vh;
+  width     : 100%;
 }
 
-.container {
-  overflow: hidden;
-  width   : 100%;
-  height  : 100vh;
+section.images-container .image-parallax {
+  position: relative;
+  z-index : 1;
 }
 
-.images-mobile {
-  background-image   : url('assets/bg/bg-mobile.png');
-  background-position: center;
-  background-repeat  : no-repeat;
-  background-size    : auto 100%;
-  height             : 100%;
-  display            : none;
+section.context {
+  position: relative;
+  z-index : 2;
 }
 
-.images-parallax {
-  width           : 100%;
-  height          : 100%;
-  background-color: #210002;
-  position        : relative;
+.wrapper {
+  max-width: 900px;
+  margin   : 0 auto;
+  height   : 100%;
 }
 
-#parallax-helper {
-  height          : 120px;
-  background-color: #210002;
-  width           : 100%;
-  margin-top      : -10px;
+.wrapper-text {
+  max-width: 700px;
+  margin   : 0 auto;
+  height   : 100%;
 }
+
+/* .images-container{
+
+} */
 
 .image-wrapper {
   position      : absolute;
-  width         : 100%;
-  height        : 100%;
-  padding-bottom: 100px;
-  top           : 0;
+  bottom        : -80px;
+  left          : 0px;
+  right         : 0px;
+  top           : 0px;
+  overflow      : hidden;
+  /* margin-bottom : 150px; */
+  /* transform  : scale(1.15); */
 }
 
 .image-wrapper img {
-  object-fit: cover;
   width     : 100%;
   height    : 100%;
+  object-fit: cover;
+  transition: .5s;
 }
 
-.content {
-  width              : 100%;
-  z-index            : 0;
-  padding-top        : 100px;
-  /* top             : 150%; */
-  position           : absolute;
-  color              : #ffaf00;
-  background-color   : #210002;
+
+section.content {
+  background-color: var(--bg-color-tertiary);
+  color           : var(--main-color);
+  position        : relative;
+}
+
+.price-platform {
+  text-align: center;
 }
 
 .headline-one {
-  text-align: center;
+  margin-top: 100px;
+  width     : 100%;
 }
 
 .headline-one h2 {
   text-transform: uppercase;
-  font-size     : 2em;
+  font-family   : serif;
+  letter-spacing: 10px;
+  white-space   : nowrap;
   font-weight   : normal;
-  letter-spacing: 7px;
-  color         : #ffaf00;
+  font-size     : 1.8em;
 }
 
 .platform-game {
   display              : grid;
-  grid-template-columns: 300px auto;
+  grid-template-columns: auto auto;
+  grid-template-rows   : auto auto;
   justify-content      : center;
-  column-gap           : 20px;
-  padding              : 30px 0;
+  padding              : 20px 0;
+  gap                  : 35px;
+  margin               : 20px 0;
 }
 
 .button-link {
-  background-color: #ffaf00;
-  color           : #210002;
-  padding         : 10px;
-  width           : 300px;
+  color           : var(--bg-color-tertiary);
+  background-color: var(--main-color);
+  font-size       : 1.1em;
   text-transform  : uppercase;
+  letter-spacing  : 1px;
+  padding         : 10px 30px;
   font-weight     : bold;
-  margin          : 15px 0;
+  transition      : .3s;
+  cursor          : pointer;
   text-align      : center;
-  transition      : .5s;
+  position        : relative;
+  min-width       : 330px;
+  white-space     : nowrap;
+}
+
+.button-link:before {
+  content      : " ";
+  position     : absolute;
+  left         : 0;
+  bottom       : 0;
+  top          : 0;
+  border-left  : 20px solid transparent;
+  border-right : 0px solid var(--main-color);
+  border-top   : 20px solid var(--main-color);
+  border-bottom: 20px solid var(--main-color);
+  background   : var(--bg-color-tertiary);
+  transition   : .3s;
+}
+
+.button-link:after {
+  transition   : .3s;
+  content      : " ";
+  position     : absolute;
+  right        : 0;
+  bottom       : 0;
+  top          : 0;
+  border-right : 20px solid var(--bg-color-tertiary);
+  border-left  : 20px solid var(--main-color);
+  border-top   : 20px solid var(--main-color);
+  border-bottom: 20px solid var(--main-color);
+  background   : var(--bg-color-tertiary);
 }
 
 .button-link:hover {
   background-color: white;
-  cursor          : pointer;
+}
+
+.button-link:hover:before {
+  border-right : 0px solid white;
+  border-top   : 20px solid white;
+  border-bottom: 20px solid white;
+}
+
+.button-link:hover:after {
+  border-left  : 20px solid white;
+  border-top   : 20px solid white;
+  border-bottom: 20px solid white;
+}
+
+.button-link-alt {
+  background-color: var(--bg-color-secondary);
+  color           : var(--bg-color-tertiary);
+}
+
+.button-link-alt::before {
+  border-right : 0px solid var(--bg-color-secondary);
+  border-top   : 20px solid var(--bg-color-secondary);
+  border-bottom: 20px solid var(--bg-color-secondary);
+}
+
+.button-link-alt::after {
+  border-left  : 20px solid var(--bg-color-secondary);
+  border-top   : 20px solid var(--bg-color-secondary);
+  border-bottom: 20px solid var(--bg-color-secondary);
+}
+
+.button-link-alt:hover {
+  background-color: var(--main-color);
+}
+
+.button-link-alt:hover:before {
+  border-right : 0px solid var(--main-color);
+  border-top   : 20px solid var(--main-color);
+  border-bottom: 20px solid var(--main-color);
+}
+
+.button-link-alt:hover:after {
+  border-left  : 20px solid var(--main-color);
+  border-top   : 20px solid var(--main-color);
+  border-bottom: 20px solid var(--main-color);
 }
 
 .video-player {
-  display        : flex;
-  justify-content: center;
-  padding        : 40px;
-  height         : 700px;
+  text-align: center;
+  padding   : 40px;
+  height    : 500px;
 }
 
 .video-player iframe {
-  max-width: 800px;
-  width    : 100%;
-  height   : 100%;
-}
-
-.blur {
-  height          : 100px;
-  width           : 100%;
-  background-color: #210002;
-  filter          : blur(200px);
-  position        : absolute;
-  top             : 100vh;
-  z-index         : 100;
+  /* max-width: 900px; */
+  width : 100%;
+  height: 100%;
 }
 
 .headline-two {
-  display       : flex;
-  flex-direction: column;
-  align-items   : center;
-}
-
-.headline-two .title {
-  color        : #ffaf00;
-  font-size    : 2em;
-  font-weight  : bold;
-  max-width    : 700px;
-  text-align   : justify;
-  margin-bottom: 30px;
+  font-family: serif;
+  font-size  : 1.6em;
+  font-weight: bold;
+  line-height: 40px;
 }
 
 .description {
-  column-count : 2;
-  margin-bottom: 40px;
+  margin-top: 40px;
+  column-gap: 20px;
 }
 
 .description p {
-  max-width    : 330px;
-  margin       : 0 10px;
-  margin-bottom: 30px;
-  font-size    : 1.2em;
-  text-align   : justify;
+  columns    : 2;
+  display    : inline-block;
+  font-size  : 1.2em;
+  line-height: 30px;
+  column-gap : 50px;
 }
 
-.alt {
-  color           : #210002;
-  background-color: #973700;
+p br {
+  margin-bottom: 50px;
 }
 
-.alt:hover {
-  color           : #210002;
-  background-color: #ffaf00;
-}
-
-
-.internal-links {
-  display              : grid;
-  grid-template-columns: 1fr 1fr;
-  margin-bottom        : 60px;
-  column-gap           : 40px;
-}
-
-.internal-links ul {
+.internal-links-container {
   display        : flex;
-  flex-direction : column;
-  justify-content: flex-end;
-  list-style     : none;
-}
-
-#internal-link-1 {
-  cursor          : pointer;
-  transition      : .5s;
-  height          : 99px;
-  background-size : contain;
-  background-color: #973700;
-  width           : 283px;
-  background-image: url('http://www.firewatchgame.com/images/merchlink_transparent.png');
-}
-
-#internal-link-1:hover,
-#internal-link-1:hover~div {
-  background-color: #ffaf00;
-}
-
-.internal-links ul:first-child li div.alt:hover,
-.internal-links ul:first-child li:hover>div {
-  background-color: #ffaf00 !important;
-
+  justify-content: center;
+  gap            : 40px;
+  margin         : 60px 0;
 }
 
 .thumbnail {
   display              : grid;
-  column-gap           : 40px;
-  row-gap              : 30px;
   grid-template-columns: 400px 400px;
   justify-content      : center;
-  margin-bottom        : 70px;
+  align-items          : center;
+  gap                  : 50px;
 }
 
 .thumbnail img {
-  max-width: 400px;
-  width    : 100%;
+  width: 100%;
 }
 
 .headline-three {
-  display       : flex;
-  flex-direction: column;
-  align-items   : center;
+  text-align : center;
+  padding-top: 60px;
 }
 
 .headline-three h1 {
-  letter-spacing: 5px;
-  text-transform: uppercase;
-  font-weight   : 500;
-  font-size     : 2.3em;
-  max-width     : 600px;
-  text-align    : center;
-  margin-bottom : 20px;
+  font-size     : 2.25em;
+  font-weight   : normal;
+  line-height   : 50px;
+  letter-spacing: 2px;
+
 }
 
 .headline-three h3 {
-  font-size     : 1.2em;
-  letter-spacing: 3px;
+  margin        : 20px 0 65px 0;
+  color         : var(--bg-color-secondary);
+  letter-spacing: 5px;
+
+}
+
+.headline-three h1,
+.headline-three h3 {
   text-transform: uppercase;
-  color         : #973700;
-  margin-bottom : 20px;
 }
 
-
-.headline-three .support-links {
-  background-image   : url('http://www.firewatchgame.com/images/firewatch_shield_small.png');
-  display            : flex;
-  justify-content    : space-evenly;
-  align-items        : center;
-  background-size    : contain;
-  background-repeat  : no-repeat;
-  background-position: center;
-  width              : 51%;
-  margin-bottom      : 30px;
+.support-links {
+  display              : grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items          : center;
+  gap                  : 10px;
 }
+
+.support-links .button-link {
+  white-space: pre-wrap;
+  min-width  : unset;
+}
+
+.support-links .button-link:after,
+.support-links .button-link:before {
+  border: none;
+}
+
+.support-links img {
+  width: 50px;
+}
+
+.headline-three h2 {
+  padding       : 40px 0;
+  letter-spacing: 5px;
+}
+
 
 footer {
-  z-index       : 10;
-  width         : 100%;
-  display       : flex;
-  flex-direction: column;
-  align-items   : center;
-  padding       : 30px 0;
+  z-index         : 10;
+  width           : 100%;
+  display         : flex;
+  flex-direction  : column;
+  align-items     : center;
+  padding         : 30px 0;
+  background-color: var(--bg-color-tertiary);
 }
 
 footer p {
@@ -339,73 +405,76 @@ footer div {
   background-image : url('http://www.firewatchgame.com/images/logo_panic_transparent.png');
 }
 
-
 .hoverYellow:hover {
   transition      : .5s;
   background-color: #ffaf00 !important;
-  cursor: pointer;
+  cursor          : pointer;
 }
 
-@media screen and (max-width: 1354px) {
-  .headline-three .support-links {
-    background-image: none;
-
-    flex-direction: column;
-    align-items   : center;
-  }
-}
-
-
-@media screen and (max-width: 875px) {
+@media screen and (max-width: 880px) {
   .thumbnail {
-    grid-template-columns: auto;
-    justify-content      : center;
-    padding              : 0 30px;
+    grid-template-columns: 1fr;
+    padding              : 0 20px;
+  }
+}
+
+@media screen and (max-width: 730px) {
+
+  .wrapper,
+  .wrapper-text {
+    padding: 0 20px;
   }
 
-  .thumbnail img {
-    width    : 100%;
-    max-width: 700px;
+  .price-platform {
+    padding: 0 20px;
   }
 
-  .internal-links {
-    grid-template-columns: auto;
-  }
-
-  .description {
-    column-count: 1;
-    padding     : 0 40px;
-  }
-
-  .description p {
-    max-width: 800px;
-  }
-
-  .title {
-    padding: 0 40px;
-  }
-
-  .video-player {
-    height: 300px;
+  .headline-one h2 {
+    font-size  : 1.3em;
+    white-space: pre-wrap !important;
   }
 
   .platform-game {
-    grid-template-columns: 300px;
+    grid-template-columns: 1fr;
+    grid-template-rows   : unset;
+    padding              : 0 20px;
   }
 
-  .images-mobile {
-    display: block;
+  .headline-two {
+    font-size  : 1.2em;
+    line-height: normal;
   }
 
-  .images-parallax {
+  .description p {
+    columns: 1;
+  }
+
+  .description p br {
+    margin-bottom: 20px;
+  }
+
+  .internal-links-container {
+    flex-wrap: wrap;
+  }
+
+  .headline-three h1 {
+    font-size: 1.2em;
+  }
+
+  .headline-three h3 {
+    font-size: 1em;
+  }
+
+  .support-links {
+    grid-template-columns: 1fr;
+    gap                  : 30px;
+  }
+
+  .support-links img {
     display: none;
   }
 
   header {
     display: none;
-  }
-
-  .headline-one {
-    padding: 0 15px;
   }
 }
