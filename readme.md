@@ -8,7 +8,7 @@
 
 
 ### Web version:
-<img src="assets/gifs/firewatch-1.gif">
+<img src="assets/gifs/firewatch-desktop.gif">
 
 ### Mobile version:
-<img src="assets/gifs/firewatch-2.gif">
+<img src="assets/gifs/firewatch-mobile.gif">
